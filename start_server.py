@@ -52,14 +52,18 @@ def main():
 
     print("\033[1;32m🚀 ĐANG KHỞI CHẠY SERVER... VUI LÒNG ĐỢI 6 GIÂY...\033[0m\n")
     
-    # Xóa log cũ và chạy JAR ngầm nhưng đẩy log ra file
+    # Xóa log cũ
     if os.path.exists(log_file): os.remove(log_file)
-    os.system(f"nohup java -Xmx512M -Duser.timezone=UTC -cp \"{driver_file}:{jar_file}\" {main_class} > {log_file} 2>&1 &")
+    
+    # --- ĐOẠN FIX LỖI "NO LINE FOUND" ---
+    # Thêm "< /dev/null" để giả lập đầu vào rỗng, tránh Scanner bị lỗi
+    cmd_run = f"nohup java -Xmx512M -Duser.timezone=UTC -cp \"{driver_file}:{jar_file}\" {main_class} < /dev/null > {log_file} 2>&1 &"
+    os.system(cmd_run)
 
     # Hiển thị Log trực tiếp trong 6 giây đầu tiên
     start_time = time.time()
     with open(log_file, 'r') as f:
-        while time.time() - start_time < 6:
+        while time.time() - start_time < 15:
             line = f.readline()
             if line:
                 print(f"\033[1;37m{line.strip()}\033[0m")
@@ -68,7 +72,7 @@ def main():
 
     # 2. Sau 6 giây, thiết lập vùng cuộn để giữ Menu ở dưới
     rows, _ = os.get_terminal_size()
-    sys.stdout.write(f"\033[1;{rows-6}r") # Vùng cuộn ở trên
+    sys.stdout.write(f"\033[1;{rows-15}r") # Vùng cuộn ở trên
     sys.stdout.flush()
 
     # Chạy luồng cập nhật log tiếp theo vào vùng cuộn
@@ -98,8 +102,8 @@ def main():
         elif choice == '4':
             os.system(f"pkill -15 -f {jar_file}")
             sys.stdout.write("\033[r\033[2J\033[H")
-            print("Đã lưu dữ liệu và tắt.")
-            time.sleep(2)
+            print("Đã lưu dữ liệu và tắt Game.")
+            time.sleep(5)
             break
 
 if __name__ == "__main__":
