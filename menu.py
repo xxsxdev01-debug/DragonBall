@@ -4,7 +4,7 @@ import time
 def clear_screen():
     os.system('clear')
 
-def menu():
+def menu_display():
     clear_screen()
     print("\033[1;32m===============================================")
     print("      MENU QUẢN TRỊ DRAGONBALL - TERMUX        ")
@@ -19,17 +19,14 @@ def menu():
 
 def start_server():
     print("\033[1;33m[i] Đang khởi động Server Java...\033[0m")
-    # Thay 'Server.jar' bằng tên file jar thật của bạn
-    # os.system('java -jar Server.jar') 
     time.sleep(2)
     print("\033[1;32m[+] Server đã sẵn sàng!\033[0m")
     input("\nNhấn Enter để quay lại Menu...")
 
 def main():
     while True:
-        menu()
+        menu_display()
         choice = input("\033[1;36m➤ Nhập lựa chọn của bạn: \033[0m")
-        
         if choice == '1':
             start_server()
         elif choice == '0':
@@ -41,4 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
