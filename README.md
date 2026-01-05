@@ -2,19 +2,19 @@
 
   <div align="center">
 
-  <a href="https://www.facebook.com/ki3tngu">
+  <a href="https://www.facebook.com/debug">
     <img alt="Facebook" src="https://img.shields.io/badge/Facebook-1877F2?&logo=facebook&logoColor=white" style="height:40px;"/>
   </a>
    </a>
    <a href="https://github.com/xxsxdev01-debug">
     <img alt="Facebook" src="https://img.shields.io/badge/Github-333333?&logo=github&logoColor=white" style="height:40px;"/>
   </a>
-   <a href="https://www.youtube.com/channel/UCLmZUmjdiwKxMEcYdgJ6Rww?sub_confirmation=1">
+   <a href="https://www.youtube.com/">
     <img alt="Facebook" src="https://img.shields.io/badge/Youtube-fc036f?&logo=youtube&logoColor=white" style="height:40px;"/>
   </a>
   <br/>
   <img alt="Github Download" src="https://img.shields.io/github/downloads/xxsxdev01-debug/DragonBall/total.svg?style=for-the-badge&color="green" />
-  <img alt="Build Version" src="https://img.shields.io/badge/NRO VERSION-2.1.1-red?style=for-the-badge"/>
+  <img alt="Build Version" src="https://img.shields.io/badge/Ngọc Rồng Online V1.1.0-red?style=for-the-badge"/>
   <img alt="Github Releases" src="https://img.shields.io/github/release/xxsxdev01-debug/DragonBall.svg?style=for-the-badge"/>
   <br/>
 
@@ -80,9 +80,9 @@ xxsxdev01-debug.sh
 - Client [Android] Offline(https://github.com/xxsxdev01-debug/DragonBall/releases)
 - Client [Android] Online(https://github.com/xxsxdev01-debug/DragonBall/releases))
 ### BƯỚC 3 - TẠO TÀI KHOẢN
-> TÀI KHOẢN MẶC ĐỊNH<br/>
-> USERNAME: admin<br/>
-> PASSWORD: 1606
+> Tài Khoản Mặc Định<br/>
+> Tài Khoản: admin<br/>
+> Mật Khẩu: 1606
 - Log Game Và Trải Nghiệm
 - Nếu Lỗi Không Thể Login Hãy Xóa Dữ Liệu Hoặc Tạo Account Mới !
 ### TẠO IP
