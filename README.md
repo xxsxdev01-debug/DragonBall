@@ -49,7 +49,7 @@ Hiểu Rõ Cách Chơi Của Game Ngọc Rồng Online
   
   
 # HƯỚNG DẪN CÀI ĐẶT
-[Hướng Dẫn Chi Tiết Tại Đây](https://github.com/xxsxdev01-debug/NgocRongTerrmux/blob/main/HDSD.md)
+[Hướng Dẫn Chi Tiết Tại Đây](https://github.com/xxsxdev01-debug/DragonBall/blob/main/HDSD.md)
 
 </div>
 
@@ -58,7 +58,7 @@ Hiểu Rõ Cách Chơi Của Game Ngọc Rồng Online
 apt update
 apt upgrade -y
 clear
-curl -L --max-redirs 15 --progress-bar "https://github.com/xxsxdev01-debug/NgocRongTerrmux/main/install.sh" -o install.sh && bash install.sh
+curl -L --max-redirs 15 --progress-bar "https://github.com/xxsxdev01-debug/DragonBall/main/install.sh" -o install.sh && bash install.sh
 ```
 ### MỘT SỐ CÂU LỆNH
 - MỞ MENU
