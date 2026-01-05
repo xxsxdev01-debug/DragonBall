@@ -7,7 +7,7 @@ def main():
     print("      HỆ THỐNG KHỞI CHẠY SERVER DRAGONBALL     ")
     print("===============================================\033[0m")
 
-    if not os.path.exists("Server.jar"):
+    if not os.path.exists("NgocRongOnline.jar"):
         print("\033[1;31m[!] Lỗi: Không tìm thấy Server.jar!\033[0m")
         return
 
@@ -16,7 +16,7 @@ def main():
     # Lệnh mở Session mới và chạy Java
     # Lưu ý: Chúng ta thêm 'cd' vào thư mục hiện tại để đảm bảo Java tìm thấy file
     current_dir = os.getcwd()
-    cmd = f"cd {current_dir} && java -Xmx512M -jar Server.jar"
+    cmd = f"cd {current_dir} && java -Xmx512M -jar NgocRongOnline.jar"
     
     # Gửi lệnh chạy sang Session mới
     os.system(f"am startservice --user 0 -a com.termux.service_execute -n com.termux/com.termux.app.TermuxService -e com.termux.execute.command '{cmd}'")
