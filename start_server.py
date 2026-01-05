@@ -56,7 +56,7 @@ def print_big_debug_null():
 |  Zalo: 0899.736.320                                   |
 |  Github: https://github.com/xxsxdev01-debug          |
 |                                                       |
-|                --- DragonBall Version 1.0 ---         |
+|            --- DragonBall Version 1.0 ---             |
 +-------------------------------------------------------+\033[0m
     """
     print(logo)
