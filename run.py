@@ -1,7 +1,7 @@
 import requests
 
 # Dùng link Raw GitHub để đảm bảo code sạch, không bị null bytes
-SOURCE_URL = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/admin.py"
+SOURCE_URL = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/menu.py"
 
 def start():
     try:
