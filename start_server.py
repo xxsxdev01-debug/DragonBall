@@ -87,7 +87,7 @@ def main():
 
 
     rows, _ = os.get_terminal_size()
-    sys.stdout.write(f"\033[1;{rows-7}r") 
+    sys.stdout.write(f"\033[1;{rows-20}r") 
     sys.stdout.flush()
 
     thread_log = threading.Thread(target=display_logs, daemon=True)
