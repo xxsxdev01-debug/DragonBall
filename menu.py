@@ -19,8 +19,13 @@ def menu_display():
 
 def start_server():
     clear_screen()
-    print("\033[1;33m[i] Đang khởi động Server Java...\033[0m")
-    os.system("java -jar Server.jar")
+    # Kiểm tra xem file start_server.py có tồn tại không
+    if os.path.exists("start_server.py"):
+        print("\033[1;33m[i] Đang gọi trình khởi động Server Game...\033[0m")
+        os.system("python start_server.py")
+    else:
+        print("\033[1;31m[!] Lỗi: Không tìm thấy file start_server.py!\033[0m")
+    
     input("\nNhấn Enter để quay lại Menu...")
 
 def setup_database():
