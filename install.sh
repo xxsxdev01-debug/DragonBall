@@ -18,7 +18,7 @@ git clone https://github.com/xxsxdev01-debug/DragonBall
 cd DragonBall 
 
 # URL này bạn thay bằng link file data.zip trong mục Release của bạn
-DATA_URL="https://github.com/xxsxdev01-debug/DragonBall/releases/download/v1.0/data.zip"
+DATA_URL="https://github.com/xxsxdev01-debug/DragonBall/releases/download/V1.0/data.zip"
 
 echo -e "\033[1;36m[i] Đang tải dữ liệu Data từ Release...\033[0m"
 wget -q --show-progress "$DATA_URL" -O data.zip
