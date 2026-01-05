@@ -18,8 +18,7 @@ def menu_display():
     print("\033[1;32m-----------------------------------------------\033[0m")
 
 def start_server():
-    clear_screen()
-    # Kiểm tra xem file start_server.py có tồn tại không
+    clear_screen()    
     if os.path.exists("start_server.py"):
         print("\033[1;33m[i] Đang gọi trình khởi động Server Game...\033[0m")
         os.system("python start_server.py")
