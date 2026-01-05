@@ -10,23 +10,22 @@ main_class = "nro.models.server.ServerManager"
 log_file = "server.log"
 
 def display_logs():
-    """Luồng in log liên tục, đảm bảo không đè lên dòng cuối của Menu"""
+    """Luồng in log liên tục vào vùng cuộn phía trên"""
     if not os.path.exists(log_file):
-        with open(log_file, 'w') as f: f.write("--- Khởi tạo Log ---\n")
+        with open(log_file, 'w') as f: f.write("--- Đang khởi tạo Log ---\n")
     
+    rows, _ = os.get_terminal_size()
+    log_row = rows - 6 
+
     with open(log_file, 'r') as f:
-        f.seek(0, 2)
+        f.seek(0, 2) 
         while True:
             line = f.readline()
             if line:
-                rows, _ = os.get_terminal_size()
-                # Lưu vị trí con trỏ
-                sys.stdout.write("\033[s")
-                # Nhảy lên dòng phía trên Menu để in log
-                sys.stdout.write(f"\033[{rows-5};1H")
+                sys.stdout.write("\033[s") # Lưu vị trí con trỏ Menu
+                sys.stdout.write(f"\033[{log_row};1H") # Nhảy lên vùng log
                 sys.stdout.write(f"\033[1;37m{line}\033[0m")
-                # Trả con trỏ về dòng nhập lệnh
-                sys.stdout.write("\033[u")
+                sys.stdout.write("\033[u") # Trả con trỏ về chỗ nhập số
                 sys.stdout.flush()
             else:
                 time.sleep(0.2)
@@ -52,30 +51,32 @@ def main():
 
     print("\033[1;32m🚀 ĐANG KHỞI CHẠY SERVER... VUI LÒNG ĐỢI 6 GIÂY...\033[0m\n")
     
-    # Xóa log cũ
     if os.path.exists(log_file): os.remove(log_file)
-    
-    # --- ĐOẠN FIX LỖI "NO LINE FOUND" ---
-    # Thêm "< /dev/null" để giả lập đầu vào rỗng, tránh Scanner bị lỗi
-    cmd_run = f"nohup java -Xmx512M -Duser.timezone=UTC -cp \"{driver_file}:{jar_file}\" {main_class} < /dev/null > {log_file} 2>&1 &"
-    os.system(cmd_run)
+
+    # --- SỬA LỖI TRIỆT ĐỂ: DÙNG LỆNH TAIL ĐỂ GIỮ INPUT ---
+    # Thay vì < /dev/null (chỉ cung cấp 1 lần), ta dùng một luồng đọc ảo liên tục
+    # Điều này ngăn Scanner của Java bị 'đói' dữ liệu dẫn đến crash
+    cmd_fix = (
+        f"tail -f /dev/null | java -Xmx512M -Duser.timezone=UTC "
+        f"-cp \"{driver_file}:{jar_file}\" {main_class} > {log_file} 2>&1 &"
+    )
+    os.system(cmd_fix)
 
     # Hiển thị Log trực tiếp trong 6 giây đầu tiên
     start_time = time.time()
     with open(log_file, 'r') as f:
-        while time.time() - start_time < 15:
+        while time.time() - start_time < 20:
             line = f.readline()
             if line:
                 print(f"\033[1;37m{line.strip()}\033[0m")
             else:
                 time.sleep(0.1)
 
-    # 2. Sau 6 giây, thiết lập vùng cuộn để giữ Menu ở dưới
+    # 2. Thiết lập vùng cuộn
     rows, _ = os.get_terminal_size()
-    sys.stdout.write(f"\033[1;{rows-15}r") # Vùng cuộn ở trên
+    sys.stdout.write(f"\033[1;{rows-20}r") 
     sys.stdout.flush()
 
-    # Chạy luồng cập nhật log tiếp theo vào vùng cuộn
     thread_log = threading.Thread(target=display_logs, daemon=True)
     thread_log.start()
 
@@ -83,13 +84,11 @@ def main():
     while True:
         rows, _ = os.get_terminal_size()
         print_menu_at_bottom()
-        
-        # Đưa con trỏ đến vị trí nhập số
         sys.stdout.write(f"\033[{rows};12H")
         sys.stdout.flush()
         
         choice = sys.stdin.readline().strip()
-        sys.stdout.write(f"\033[{rows};12H\033[K") # Xóa lệnh vừa nhập
+        sys.stdout.write(f"\033[{rows};12H\033[K")
         
         if choice == '1':
             os.system("free -h")
@@ -101,11 +100,12 @@ def main():
             os.system("bash admin.sh") if os.path.exists("admin.sh") else None
         elif choice == '4':
             os.system(f"pkill -15 -f {jar_file}")
+            os.system("pkill -f 'tail -f /dev/null'") # Tắt cả luồng ảo
             sys.stdout.write("\033[r\033[2J\033[H")
-            print("Đã lưu dữ liệu và tắt Game.")
-            time.sleep(5)
+            print("Đã lưu dữ liệu và tắt.")
+            time.sleep(2)
             break
 
 if __name__ == "__main__":
     main()
-    
+              
