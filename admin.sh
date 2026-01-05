@@ -20,7 +20,7 @@ def Show_Success(action, old_v, new_v):
 def main():
     try:
         # Kết nối Database từ mã nguồn gốc
-        conn = mysql.connect(host='localhost', user='root', password='', database='JINN_FREE_V2')
+        conn = mysql.connect(host='localhost', user='root', password='', database='dragonball')
         cursor = conn.cursor()
     except:
         print(f"{R}[!] Lỗi Kết Nối Cơ Sở Dữ Liệu{X}")
