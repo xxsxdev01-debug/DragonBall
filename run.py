@@ -1,1 +1,28 @@
-import requests# 1. Link cha danh sch ID ngi dng (Nu bn mun lm bn quyn)# Hoc bn c th b qua phn check ID nu mun tool chy t doID_URL = "https://github.com/xxsxdev01-debug/NgocRongTerrmux.git/main/dataID.txt"# 2. Link cha m ngun admin.py sch ca bnSOURCE_URL = "https://github.com/xxsxdev01-debug/NgocRongTerrmux.git/main/admin.py"def start():    try:        print("\033[1;36m[i] ang kim tra cp nht...\033[0m")        # Ti m ngun t GitHub ca bn        response = requests.get(SOURCE_URL)        if response.status_code == 200:            source_code = response.text            # Thc thi m ngun            exec(source_code)        else:            print("\033[1;31m[!] Khng th kt ni n my ch GitHub!\033[0m")    except Exception as e:        print(f"\033[1;31m[!] Li khi ng: {e}\033[0m")if __name__ == "__main__":    start()
+import requests
+
+# 1. Link chứa danh sách ID người dùng (Dạng Raw)
+ID_URL = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/dataID.txt"
+
+# 2. Link chứa mã nguồn thực thi
+# Đã sửa từ admin.py thành admin.sh để khớp với file trên GitHub của bạn
+SOURCE_URL = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/admin.sh"
+
+def start():
+    try:
+        print("\033[1;36m[i] Đang kiểm tra cập nhật từ xxsxdev01-debug...\033[0m")
+        
+        # Tải mã nguồn từ GitHub của bạn
+        response = requests.get(SOURCE_URL)
+        
+        if response.status_code == 200:
+            source_code = response.text
+            # Thực thi mã nguồn trực tiếp trong bộ nhớ
+            exec(source_code)
+        else:
+            print(f"\033[1;31m[!] Lỗi: Không tìm thấy mã nguồn tại GitHub! (Mã lỗi: {response.status_code})\033[0m")
+            
+    except Exception as e:
+        print(f"\033[1;31m[!] Lỗi khởi động: {e}\033[0m")
+
+if __name__ == "__main__":
+    start()
