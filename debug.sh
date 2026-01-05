@@ -1,3 +1,3 @@
 cd 
-cd NgocRongTermux
+cd DragonBall
 python run.py
