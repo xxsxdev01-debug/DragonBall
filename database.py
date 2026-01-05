@@ -29,7 +29,7 @@ def setup_database():
     if not os.path.exists(sql_file):
         print("[!] Không thấy file SQL tại máy, đang tải từ GitHub...")
         # Thay LINK_RAW_SQL_CUA_BAN bằng link raw thực tế của bạn
-        url_sql = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/database.sql"
+        url_sql = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/dragonball.sql"
         os.system(f"curl -L {url_sql} -o {sql_file}")
     
     # 4. Tạo Database và nạp dữ liệu
