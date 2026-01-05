@@ -20,20 +20,27 @@ def menu_display():
 def start_server():
     clear_screen()
     print("\033[1;33m[i] Đang khởi động Server Java...\033[0m")
-    # Lệnh chạy thực tế: java -jar Server.jar
     os.system("java -jar Server.jar")
     input("\nNhấn Enter để quay lại Menu...")
 
 def setup_database():
     clear_screen()
-    # Kiểm tra xem file database.py có tồn tại không trước khi chạy
     if os.path.exists("database.py"):
-        print("\033[1;36m[i] Đang gọi trình thiết lập Cơ sở dữ liệu...\033[0m")
         os.system("python database.py")
     else:
-        print("\033[1;31m[!] Lỗi: Không tìm thấy file database.py trên máy!\033[0m")
-        print("Vui lòng kiểm tra lại quá trình tải từ GitHub.")
-    
+        print("\033[1;31m[!] Lỗi: Không tìm thấy file database.py!\033[0m")
+    input("\nNhấn Enter để quay lại Menu...")
+
+def update_tool():
+    clear_screen()
+    if os.path.exists("update.py"):
+        os.system("python update.py")
+    else:
+        # Nếu chưa có file update.py, tự dùng curl tải về rồi chạy
+        print("\033[1;33m[!] Đang tải trình cập nhật lần đầu...\033[0m")
+        url = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/update.py"
+        os.system(f"curl -L {url} -o update.py")
+        os.system("python update.py")
     input("\nNhấn Enter để quay lại Menu...")
 
 def main():
@@ -44,8 +51,10 @@ def main():
         if choice == '1':
             start_server()
         elif choice == '2':
-            # Bây giờ phím 2 đã có thể ấn và hoạt động
             setup_database()
+        elif choice == '5':
+            # Phím số 5 đã có thể sử dụng
+            update_tool()
         elif choice == '0':
             print("Đang thoát...")
             break
@@ -55,3 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
