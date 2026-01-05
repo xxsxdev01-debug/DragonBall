@@ -36,5 +36,6 @@ def main():
             print("\033[1;31m[!] Lựa chọn không hợp lệ!\033[0m")
             time.sleep(1)
 
+# QUAN TRỌNG: Dòng này giúp tool tự bật Menu ngay khi tải về
 if __name__ == "__main__":
     main()
