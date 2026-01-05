@@ -55,10 +55,10 @@ Hiểu Rõ Cách Chơi Của Game Ngọc Rồng Online
 
 ### SAO CHÉP VÀ DÁN ĐOẠN MÃ DƯỚI VÀO TERMUX
 ```
-apt update
-apt upgrade -y
+apt update && apt upgrade -y
 clear
-curl -L --max-redirs 15 --progress-bar "https://github.com/xxsxdev01-debug/DragonBall/main/install.sh" -o install.sh && bash install.sh
+curl -L "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/install.sh" -o install.sh && bash install.sh
+
 ```
 ### MỘT SỐ CÂU LỆNH
 - MỞ MENU
