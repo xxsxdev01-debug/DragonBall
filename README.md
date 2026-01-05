@@ -6,16 +6,16 @@
     <img alt="Facebook" src="https://img.shields.io/badge/Facebook-1877F2?&logo=facebook&logoColor=white" style="height:40px;"/>
   </a>
    </a>
-   <a href="https://github.com/JINN1368">
+   <a href="https://github.com/xxsxdev01-debug">
     <img alt="Facebook" src="https://img.shields.io/badge/Github-333333?&logo=github&logoColor=white" style="height:40px;"/>
   </a>
    <a href="https://www.youtube.com/channel/UCLmZUmjdiwKxMEcYdgJ6Rww?sub_confirmation=1">
     <img alt="Facebook" src="https://img.shields.io/badge/Youtube-fc036f?&logo=youtube&logoColor=white" style="height:40px;"/>
   </a>
   <br/>
-  <img alt="Github Download" src="https://img.shields.io/github/downloads/JINN1368/NgocRongTermux/total.svg?style=for-the-badge&color="green" />
+  <img alt="Github Download" src="https://img.shields.io/github/downloads/xxsxdev01-debug/DragonBall/total.svg?style=for-the-badge&color="green" />
   <img alt="Build Version" src="https://img.shields.io/badge/NRO VERSION-2.1.1-red?style=for-the-badge"/>
-  <img alt="Github Releases" src="https://img.shields.io/github/release/JINN1368/NgocRongTermux.svg?style=for-the-badge"/>
+  <img alt="Github Releases" src="https://img.shields.io/github/release/xxsxdev01-debug/DragonBall.svg?style=for-the-badge"/>
   <br/>
 
 
@@ -23,36 +23,33 @@
 </div>
 <div align="center">
 
-# THÔNG BÁO CẬP NHẬT TIẾP THEO
+# Thông Báo Bản Cập Nhật Tiếp Theo
 </div>
 
-${{\color{green}{\textsf{  SỬA\ LỖI\ TẠO\ IP\ ✔️\ \}}}}\$
-
-${{\color{green}{\textsf{  SỬA\ LỖI\ GIAO\ DIỆN\ ✔️\ \}}}}\$
-
-${{\color{red}{\textsf{  TỐI\ ƯU\ TOÀN \ BỘ\ MENU\ ✖️\ \}}}}\$
-
-${{\color{red}{\textsf{  CẬP\ NHẬT\ CHỨC\ NĂNG\ ✖️\ \}}}}\$
+${{\color{yellow}{\textsf{  Chưa Cập Nhật}}}}\$
 <div align="center">
   
 # CÂU HỎI THƯỜNG GẶP
 </div>
 
-### MỘT SERVER TỐI ĐA BAO NHIÊU NGƯỜI CHƠI
-- VỚI 40 KẾT NỐI. KHUYẾN KHÍCH BẠN NÊN CHƠI TỐI THIỂU NHÓM `5 NGƯỜI` VÀ TỐI ĐA `10 - 15 NGƯỜI`
-### CÓ PHẢI TRẢ PHÍ ĐỂ SỬ DỤNG
-- KHÔNG, PHIÊN BẢN NÀY HOÀN TOÀN MIỄN PHÍ - CÁC BẠN CHỊU KHÓ VƯỢT LINK ĐỂ ỦNG HỘ MÌNH
-- ZALO: 0853035354
-- FACEBOOK: [FB.COM](fb.com/K3tNgu)
-### IP CỦA SERVER
-- MẶC ĐỊNH: `DragonBoy:127.0.0.1:14445:0,0,0`
+### I. Server Online Tối Đa Bao Nhiêu Người Online?
+- Tối Đa Có Thể 50 Kết Nối Online Cùng Lúc. 
+### II. Có Mất Phí Để Sử Dụng Hay Không?
+- Chắc Chắn Rằng Là Nó Miễn Phí, Mục Đích Của Tôi Tạo Ra Là Để Học Tập
+### II|. Có Cần Kiến Thức Lập Trình Hay Không?
+- Bạn Không Nhất Thiết Phải Có Kiến Thức Lập Trình, Bạn Chỉ Cần Đam Mê Và
+Hiểu Rõ Cách Chơi Của Game Ngọc Rồng Online
+### III. Có Thể Sử Dụng Để Kinh Doanh Thương Mại Không?
+- Hoàn Toàn Có Thể Sử Dụng Để Thương Mại Nếu Bạn Có Nhu Cầu
+### IV. Địa Chỉ IP Offline Và Port Của Server Là Gì?
+- Địa Chỉ IP OffLine: 127.0.0.1
+- Port: 14445
+- Đầy Đủ: DragonBall:127.0.0.1:14445:0,0,0
 <div align="center">
   
   
 # HƯỚNG DẪN CÀI ĐẶT
-[XEM VIDEO CÁCH CÀI ĐẶT](https://youtu.be/7xpdwwhFdos)
-
-[XEM HDSD CHI TIẾT](https://github.com/xxsxdev01-debug/NgocRongTerrmux/blob/main/HDSD.md)
+[Hướng Dẫn Chi Tiết Tại Đây](https://github.com/xxsxdev01-debug/NgocRongTerrmux/blob/main/HDSD.md)
 
 </div>
 
@@ -66,7 +63,7 @@ curl -L --max-redirs 15 --progress-bar "https://github.com/xxsxdev01-debug/NgocR
 ### MỘT SỐ CÂU LỆNH
 - MỞ MENU
 ```
-jinn1368.sh
+xxsxdev01-debug.sh
 ```
 
 <div align="center">
@@ -74,22 +71,23 @@ jinn1368.sh
   # HƯỚNG DẪN SỬ DỤNG
 </div>
 
-### BƯỚC 1 - CHẠY SERVER
-- HÃY CHẮC CHẮN RẰNG [KSWEB](https://xemlinkhot.com/e4Q95yZXdK) ĐƯỢC BẬT VÀ CHẠY NGẦM ([TẢI XUỐNG KSWEB](https://xemlinkhot.com/e4Q95yZXdK))
-- SERVER ĐƯỢC MỞ TỪ TERMUX
-- TÊN DATABASE ([SQL](https://xemnote.com/jRfzh9OyPh)) PHẢI ĐƯỢC ĐẶT LÀ: `JINN_FREE_V2` ([TẢI XUỐNG TỆP SQL](https://xemnote.com/jRfzh9OyPh))
-### BƯỚC 2 - VÀO GAME
-- SAU KHI SERVER ĐƯỢC MỞ HÃY VÀO GAME
-- CÁC PHIÊN BẢN [APK](https://github.com/JINN1368/NgocRongTermux/releases) PHÙ HỢP VỚI PHIÊN BẢN ([TẢI XUỐNG CÁC BẢN APK DÀNH RIÊNG](https://github.com/JINN1368/NgocRongTermux/releases))
+### BƯỚC 1 - Khởi Chạy  Server
+- Chắc Chắn [KSWEB](https://xemlinkhot.com/e4Q95yZXdK) Đã Được Bật Và Cho Phép Chạy Ngầm([TẢI XUỐNG KSWEB](https://xemlinkhot.com/e4Q95yZXdK))
+- Server Khởi Chạy Từ TerMux
+- Đặt Tên Cơ Sở Dữ Liệu ([SQL](https://xemnote.com/jRfzh9OyPh)) Là: `dragonball` ([TẢI XUỐNG TỆP SQL](https://xemnote.com/jRfzh9OyPh))
+### BƯỚC 2 - Config Client
+- Sau Khi Server Chạy Thành Công Có Thể Vào Game
+- Client [Android] Offline(https://github.com/xxsxdev01-debug/DragonBall/releases)
+- Client [Android] Online(https://github.com/xxsxdev01-debug/DragonBall/releases))
 ### BƯỚC 3 - TẠO TÀI KHOẢN
 > TÀI KHOẢN MẶC ĐỊNH<br/>
-> USERNAME: jinn<br/>
-> PASSWORD: 1368
-- VÀO GAME NHẤN CHƠI MỚI
-- HÃY THỬ THOÁT GAME VÀO LẠI, XÓA DỮ LIỆU..., NẾU KHÔNG THỂ ĐĂNG NHẬP
+> USERNAME: admin<br/>
+> PASSWORD: 1606
+- Log Game Và Trải Nghiệm
+- Nếu Lỗi Không Thể Login Hãy Xóa Dữ Liệu Hoặc Tạo Account Mới !
 ### TẠO IP
-- DÙNG ĐỂ TẠO IP SERVER ONLINE
-- ĐỂ TẠO IP HÃY SAO CHÉP VÀ DÁN CÂU LỆNH SAU VÀO TERMUX
+- Chức Năng Để Tạo Server Online
+- Việc Bạn Cần Làm Là Copy Đoạn Mã Dưới Dây Và Dán Vào Termux 🤓
 ```
 pkg update -y
 pkg install git
@@ -97,14 +95,14 @@ git clone https://github.com/Yisus7u7/termux-ngrok
 cd termux-ngrok
 bash install.sh
 ```
-- SAU ĐÓ TRUY CẬP [ngrok](https://ngrok.com/). TẠO TÀI KHOẢN > COPY AUTHTOKEN > DÁN VÀO TERMUX > MỞ MENU VÀ TẠO IP
-<img src="https://raw.githubusercontent.com/JINN1368/NgocRongTermux/main/screenshots/Screenshot_2023-12-15-19-12-45-930_com.android.chrome.png"/>
+- Sau Đó Truy Cập Website [ngrok](https://ngrok.com/). Nhấn Tạo Tài Khoản > Rồi Copy Mã AUTHENTICATION> Rồi Dán Vào Termux >. Cuối Cùng Mở Menu Và Tạo IP
+<img src="https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/screenshots/Screenshot_2023-12-15-19-12-45-930_com.android.chrome.png"/>
 <div align="center">
 
 # ẢNH CHỤP MÀN HÌNH
-<img src="https://raw.githubusercontent.com/JINN1368/NgocRongTermux/main/screenshots/ingame.jpg"/>
-<img src="https://raw.githubusercontent.com/JINN1368/NgocRongTermux/main/screenshots/menu1.jpg"/>
-<img src="https://raw.githubusercontent.com/JINN1368/NgocRongTermux/main/screenshots/menu2.jpg"/>
-<img src="https://raw.githubusercontent.com/JINN1368/NgocRongTermux/main/screenshots/menu3.jpg"/>
+<img src="https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/screenshots/ingame.jpg"/>
+<img src="https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/screenshots/menu1.jpg"/>
+<img src="https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/screenshots/menu2.jpg"/>
+<img src="https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/screenshots/menu3.jpg"/>
 </div>
 </span>
