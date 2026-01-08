@@ -45,7 +45,7 @@ def print_fixed_menu():
 def print_big_debug_null():
     os.system('clear')
     # Sửa lại đoạn từ dòng 47
-logo = """
+    logo = r"""
 +------------------------------------------------------------+
 |  ____  _____ ____  _   _  ____   _   _ _   _ _             |
 | |  _ \| ____| __ )| | | |/ ___| | \ | | | | | |            |
@@ -60,9 +60,7 @@ logo = """
 |            --- DragonBall Version 1.0 ---                  |
 +------------------------------------------------------------+
 """
-# Chỉ cần 1 lệnh print này để in toàn bộ nội dung trên
-
-    print(logo)
+    print(logo) # Đảm bảo dòng này thẳng hàng với dòng logo = r""" ở trên  
 
 def main():
     print_big_debug_null()
