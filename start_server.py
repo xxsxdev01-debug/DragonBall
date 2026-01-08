@@ -44,12 +44,11 @@ def print_fixed_menu():
 
 def print_big_debug_null():
     os.system('clear')
-    # Định nghĩa mã màu chuẩn cho Terminal
     RED = "\x1b[1;31m"
     YELLOW = "\x1b[1;33m"
     RESET = "\x1b[0m"
     
-    # Đã căn chỉnh chính xác số dấu cách để khung ║ bên phải thẳng hàng
+    # Căn chỉnh lại số lượng dấu cách để bù trừ cho mã màu ẩn
     logo = f"""{RED}+══════════════════════════════════════════════════════════+
 ║  ____  _____ ____  _   _  ____   _   _ _   _ _           ║
 ║ |  _ \\| ____| __ )| | | |/ ___| | \\ | | | | | |          ║
@@ -61,7 +60,7 @@ def print_big_debug_null():
 ║{YELLOW}  Zalo: 0899.736.320                                      {RED}║
 ║{YELLOW}  Github: https://github.com/xxsxdev01-debug              {RED}║
 ║                                                          ║
-║{RED}            --- DragonBall Version 1.0 ---               ║
+║{RED}            --- DragonBall Version 1.0 ---                 ║
 +══════════════════════════════════════════════════════════+{RESET}"""
     print(logo)
 
