@@ -60,8 +60,10 @@ def print_big_debug_null():
 +------------------------------------------------------------+
 """
     print(logo)
+
 def main():
     print_big_debug_null()
+
     
     if not os.path.exists(driver_file):
         os.system(f"curl -L https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.49/mysql-connector-java-5.1.49.jar -o {driver_file}")
