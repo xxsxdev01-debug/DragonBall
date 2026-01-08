@@ -44,22 +44,22 @@ def print_fixed_menu():
 
 def print_big_debug_null():
     os.system('clear')
-    # Sử dụng ký tự escape thực sự để máy hiểu lệnh màu
+    # Định nghĩa mã màu
     RED = "\x1b[1;31m"
     YELLOW = "\x1b[1;33m"
     RESET = "\x1b[0m"
     
-    # Dùng chuỗi thường (không có r) và nhân đôi dấu gạch chéo \\ để không bị hỏng hình
+    # Chèn mã RED vào trước các thanh ║ ở cuối dòng để giữ khung màu đỏ
     logo = f"""{RED}+══════════════════════════════════════════════════════════+
 ║  ____  _____ ____  _   _  ____   _   _ _   _ _            ║
 ║ |  _ \\| ____| __ )| | | |/ ___| | \\ | | | | | |           ║
 ║ | | | |  _| |  _ \\| | | | |  _  |  \\| | | | | |           ║
 ║ | |_| | |___| |_) | |_| | |_| | | |\\  | |_| | |___        ║
-║ |____/|_____|____/ \\___/ \\____| |_| \\_|\\___/|_____|       ║
+║ |____/|_____|____/ \___/ \____| |_| \_|\___/|_____|       ║
 ║                                                          ║
-║{YELLOW}  Dev: Debug Null                                         ║
-║  Zalo: 0899.736.320                                      ║
-║  Github: https://github.com/xxsxdev01-debug              ║
+║{YELLOW}  Dev: Debug Null                                         {RED}║
+║{YELLOW}  Zalo: 0899.736.320                                      {RED}║
+║{YELLOW}  Github: https://github.com/xxsxdev01-debug              {RED}║
 ║                                                          ║
 ║{RED}            --- DragonBall Version 1.0 ---                 ║
 +══════════════════════════════════════════════════════════+{RESET}"""
