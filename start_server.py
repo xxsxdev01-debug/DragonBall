@@ -61,7 +61,7 @@ def print_big_debug_null():
 ║{YELLOW}  Zalo: 0899.736.320                                      {RED}║
 ║{YELLOW}  Github: https://github.com/xxsxdev01-debug              {RED}║
 ║                                                          ║
-║{RED}            --- DragonBall Version 1.0 ---                 ║
+║{RED}            --- DragonBall Version 1.0 ---               ║
 +══════════════════════════════════════════════════════════+{RESET}"""
     print(logo)
 
