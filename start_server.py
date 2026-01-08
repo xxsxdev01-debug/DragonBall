@@ -44,7 +44,7 @@ def print_fixed_menu():
 
 def print_big_debug_null():
     os.system('clear')
-    logo = r"""
+logo = r"""
 +------------------------------------------------------------+
 |  ____  _____ ____  _   _  ____   _   _ _   _ _             |
 | |  _ \| ____| __ )| | | |/ ___| | \ | | | | | |            |
@@ -60,7 +60,6 @@ def print_big_debug_null():
 +------------------------------------------------------------+
 """
     print(logo)
-
 def main():
     print_big_debug_null()
     
