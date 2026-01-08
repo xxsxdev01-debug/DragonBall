@@ -59,7 +59,7 @@ logo = r"""
 |            --- DragonBall Version 1.0 ---                  |
 +------------------------------------------------------------+
 """
-print(logo)
+    print(logo)
 def main():
     print_big_debug_null()
     
