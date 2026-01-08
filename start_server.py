@@ -57,11 +57,11 @@ def print_big_debug_null():
 ║ | |_| | |___| |_) | |_| | |_| | | |\\  | |_| | |___        ║
 ║ |____/|_____|____/ \\___/ \\____| |_| \\_|\\___/|_____|       ║
 ║                                                          ║
-{YELLOW}║  Dev: Debug Null                                         ║
+║{YELLOW}  Dev: Debug Null                                         ║
 ║  Zalo: 0899.736.320                                      ║
 ║  Github: https://github.com/xxsxdev01-debug              ║
 ║                                                          ║
-{RED}║            --- DragonBall Version 1.0 ---                 ║
+║{RED}            --- DragonBall Version 1.0 ---                 ║
 +══════════════════════════════════════════════════════════+{RESET}"""
     print(logo)
     
