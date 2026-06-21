@@ -36,7 +36,7 @@ ${{\color{yellow}{\textsf{  Chưa Cập Nhật}}}}\$
 - Tối Đa Có Thể 50 Kết Nối Online Cùng Lúc. 
 ### II. Có Mất Phí Để Sử Dụng Hay Không?
 - Chắc Chắn Rằng Là Nó Miễn Phí, Mục Đích Của Tôi Tạo Ra Là Để Học Tập
-### II|. Có Cần Kiến Thức Lập Trình Hay Không?
+### II. Có Cần Kiến Thức Lập Trình Hay Không?
 - Bạn Không Nhất Thiết Phải Có Kiến Thức Lập Trình, Bạn Chỉ Cần Đam Mê Và
 Hiểu Rõ Cách Chơi Của Game Ngọc Rồng Online
 ### III. Có Thể Sử Dụng Để Kinh Doanh Thương Mại Không?
