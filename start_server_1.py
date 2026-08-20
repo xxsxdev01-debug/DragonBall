@@ -64,23 +64,27 @@ def print_big_debug_null():
 +══════════════════════════════════════════════════════════+{RESET}"""
     print(logo)
 
-    
-
 def main():
     print_big_debug_null()
-
-
     
     if not os.path.exists(driver_file):
         os.system(f"curl -L https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.49/mysql-connector-java-5.1.49.jar -o {driver_file}")
 
     if os.path.exists(log_file): os.remove(log_file)   
+    
+    # [!] BẢN VÁ LỖI: Tự động tạo sẵn file log rỗng để tránh FileNotFoundError
+    with open(log_file, 'w') as f:
+        pass
+
     cmd_fix = (
         f"tail -f /dev/null | java -Xmx512M -Duser.timezone=UTC "
         f"-cp \"{driver_file}:{jar_file}\" {main_class} > {log_file} 2>&1 &"
     )
     os.system(cmd_fix)
 
+    # [!] BẢN VÁ LỖI: Ép Python phải đợi cho đến khi file log thực sự tồn tại
+    while not os.path.exists(log_file):
+        time.sleep(0.1)
     
     start_time = time.time()
     with open(log_file, 'r') as f:
@@ -92,14 +96,12 @@ def main():
             else:
                 time.sleep(0.1)
 
-
     rows, _ = os.get_terminal_size()
     sys.stdout.write(f"\033[1;{rows-20}r") 
     sys.stdout.flush()
 
     thread_log = threading.Thread(target=display_logs, daemon=True)
     thread_log.start()
-
     
     while True:
         rows, _ = os.get_terminal_size()
@@ -130,3 +132,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
