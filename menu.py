@@ -33,17 +33,17 @@ def menu_display():
 
 def start_server():
     clear_screen()    
-    if os.path.exists("start_server.py"):
+    if os.path.exists("start_server_1.py"):
         print("\033[1;33m[i] Đang gọi trình khởi động Server Game...\033[0m")
-        os.system("python start_server.py")
+        os.system("python start_server_1.py")
     else:
         print("\033[1;31m[!] Lỗi: Không tìm thấy file start_server.py!\033[0m")
     input("\nNhấn Enter để quay lại Menu...")
 
 def setup_database():
     clear_screen()
-    if os.path.exists("database.py"):
-        os.system("python database.py")
+    if os.path.exists("database1.py"):
+        os.system("python database1.py")
     else:
         print("\033[1;31m[!] Lỗi: Không tìm thấy file database.py!\033[0m")
     input("\nNhấn Enter để quay lại Menu...")
