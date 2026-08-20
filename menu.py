@@ -54,9 +54,9 @@ def update_tool():
         os.system("python update.py")
     else:
         print("\033[1;33m[!] Đang tải trình cập nhật lần đầu...\033[0m")
-        url = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/update.py"
-        os.system(f"curl -L {url} -o update.py")
-        os.system("python update.py")
+        url = "https://raw.githubusercontent.com/xxsxdev01-debug/DragonBall/main/updatev1.py"
+        os.system(f"curl -L {url} -o updatev1.py")
+        os.system("python updatev1.py")
     input("\nNhấn Enter để quay lại Menu...")
 
 def main():
